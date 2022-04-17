@@ -20,7 +20,7 @@ body {
 /* Nav Bar Style */
 
 .navwrapper {
-    font-family: 'Lora', serif;
+    font-family: 'Inter', serif;
     box-shadow: 0px 0px 10px var(--clr-gray200);
     margin: 0;
     padding: 1rem 3rem;
@@ -40,7 +40,7 @@ body {
 }
 
 .nav-item {
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 2.5rem;
     transition: .2s all;
     

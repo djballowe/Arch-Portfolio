@@ -40,7 +40,7 @@ body {
 }
 
 .nav-item {
-    font-size: 18px;
+    font-size: 20px;
     margin-left: 2.5rem;
     transition: .2s all;
     
@@ -75,7 +75,6 @@ img:focus::after {
 }
 
 .nav-list:hover .nav-item {
-    filter: blur(1px);
     opacity: .5;
     transform: scale(.98);
     box-shadow: none;
