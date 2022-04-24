@@ -11,6 +11,7 @@
 
 body {
     font-family: 'Lora', serif;
+    
 }
 
 *,
@@ -106,59 +107,34 @@ body {
 
 .mySlides {
     display: none;
-    overflow: hidden;
 }
 
 .images {
     cursor: pointer;
     vertical-align: middle;
-    
+    object-fit: contain;
+}
+
+.fix {
+    padding: 5em;
+}
+
+.fixer {
+    padding: 10em;
 }
 
 .slideshow-container {
     display: flex;
-    max-width: 1000px;
-    height: 660px;
+    max-width: 90rem;
     position: relative;
     margin: auto;
-    margin-top: 50px;
-}
-
-
-
-/* Previous Next Arrows */
-
-.prev,
-.next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    padding: 16px;
-    margin-top: -22px;
-    color: black;
-    font-size: 18px;
-    font-weight: normal;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+    margin-top: 100px;
+    overflow: hidden;
+    align-items: center;
     
 }
 
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
-}
-
-
-/* add hover animation for next prev arrows */
-
-.prev:hover,
-.next:hover {
-
-}
-
-/* slideshow numbers */
+/* slideshow numbers and arrows */
 
 .arrow {
     width: 15px;
@@ -193,7 +169,6 @@ body {
 .test {
     display: flex;
     justify-content: flex-end;
-    margin-top: 20px;
     margin-right: 5%;
 }
 
@@ -227,6 +202,30 @@ span {
         opacity: 1
     }
 }
+
+/* Media Ques */
+
+@media screen and (max-width: 2000px) {
+    .slideshow-container {
+        max-width: 60%;
+        max-height: 700px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+@media screen and (max-width: 3840px) {
+    .slideshow-container {
+        max-width: 50%;
+        max-height: 800px;
+        align-items: center;
+        justify-content: center;
+        margin-top: 85px;
+        
+    }
+}
+
 
 
 
