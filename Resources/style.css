@@ -106,25 +106,22 @@ body {
 
 .mySlides {
     display: none;
+    overflow: hidden;
 }
 
 .images {
-    vertical-align: middle;
-    width: auto;
-    display: block;
-    max-width: 100%;
-    max-height: 100%;
     cursor: pointer;
+    vertical-align: middle;
+    
 }
 
 .slideshow-container {
-    max-width: 57%;
+    display: flex;
+    max-width: 1000px;
+    height: 660px;
     position: relative;
     margin: auto;
     margin-top: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 
