@@ -162,14 +162,8 @@ body {
 .entire {
     display: flex;
     padding: 0 2rem;
-    justify-content: space-between;
     align-items: center;
-}
-
-.test {
-    display: flex;
     justify-content: flex-end;
-    margin-right: 5%;
 }
 
 span {
