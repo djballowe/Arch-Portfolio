@@ -1,0 +1,15 @@
+.mobile-menu {
+  @include flex();
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  background-color: white;
+  position: absolute;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  font-size: 2rem;
+  li {
+    padding: 10px 0;
+  }
+}

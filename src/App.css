@@ -128,6 +128,9 @@ table {
 
 body {
   font-family: "Work Sans", sans-serif;
+}
+
+.header {
   padding: 20px;
 }
 
@@ -155,6 +158,39 @@ body {
 }
 
 .mobile-menu {
+  display: flex;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
   background-color: white;
   position: absolute;
+  text-align: center;
+  height: 100vh;
+  width: 100%;
+  font-size: 2rem;
+}
+.mobile-menu li {
+  padding: 10px 0;
+}
+
+.slide-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(80vh - 76px);
+}
+.slide-container img {
+  width: 90%;
+}
+
+.slide-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slide-controls p:nth-of-type(2) {
+  color: rgb(175, 175, 175);
+  padding: 0 10px;
+  font-size: 1.3rem;
 }/*# sourceMappingURL=App.css.map */

@@ -130,8 +130,8 @@ table {
 
 body {
   font-family: "Work Sans", sans-serif;
-  padding: 20px;
 }
 
-@import "./components/header";
-@import "./components/mobile";
+@import "./components/Header/header";
+@import "./components/Header/mobile";
+@import "./components/Home/home";
