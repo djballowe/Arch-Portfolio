@@ -13,18 +13,30 @@ const Contact = () => {
           get back within 48 hours. I look forward to hearing from you.
         </p>
       </div>
-      <div>
-        <label htmlFor="">Name</label>
-        <div>
-          <input type="text" />
-          <input type="text" />
+      <form action="">
+        <div className="contact-input">
+          <p>Name*</p>
+          <div className="input-name">
+            <input type="text" required />
+            <input type="text" required />
+          </div>
+          <div className="input-email">
+            <p>Email*</p>
+            <input type="text" required />
+          </div>
+          <div className="input-subject">
+            <p>Subject*</p>
+            <input type="text" required />
+          </div>
+          <div className="input-message">
+            <p>Message*</p>
+            <textarea name="" id="" cols="30" rows="10" required></textarea>
+          </div>
+          <div className="contact-submit">
+            <button>SUBMIT</button>
+          </div>
         </div>
-        <label htmlFor="">Email</label>
-        <input type="text" />
-        <input type="text" />
-        <textarea name="" id="" cols="30" rows="10"></textarea>
-        <button>Submit</button>
-      </div>
+      </form>
     </div>
   );
 };
