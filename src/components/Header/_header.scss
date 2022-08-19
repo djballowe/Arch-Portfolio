@@ -24,13 +24,25 @@
 .nav {
   list-style: none;
   display: none;
+  position: relative;
   li {
+    margin-left: 10px;
     padding: 10px 0;
     cursor: pointer;
     &:nth-of-type(1) {
       padding-top: 0px;
     }
   }
+}
+
+.line-hover {
+  transition: all .5s ease-in-out;
+  height: 19px;
+  width: 2px;
+  background-color: black;
+  position: absolute;
+  left: 1%;
+  top: 0%;
 }
 
 @media only screen and (min-width: 900px) {
@@ -42,7 +54,7 @@
   }
   .main-container {
     display: grid;
-    grid-template-columns: .5fr fit-content(70%);
+    grid-template-columns: 0.5fr fit-content(70%);
   }
   .logo {
     justify-content: start;

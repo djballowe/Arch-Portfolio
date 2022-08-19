@@ -152,13 +152,25 @@ body {
 .nav {
   list-style: none;
   display: none;
+  position: relative;
 }
 .nav li {
+  margin-left: 10px;
   padding: 10px 0;
   cursor: pointer;
 }
 .nav li:nth-of-type(1) {
   padding-top: 0px;
+}
+
+.line-hover {
+  transition: all 0.5s ease-in-out;
+  height: 19px;
+  width: 2px;
+  background-color: black;
+  position: absolute;
+  left: 1%;
+  top: 0%;
 }
 
 @media only screen and (min-width: 900px) {
