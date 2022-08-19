@@ -267,4 +267,22 @@ body {
     flex: 50%;
     max-width: 100%;
   }
+}
+.profile-image img {
+  width: 100%;
+}
+
+.profile-text {
+  margin: auto;
+  width: 80%;
+}
+.profile-text p {
+  padding: 10px 0;
+}
+.profile-text p:nth-of-type(2) {
+  font-style: italic;
+  padding: 0px;
+}
+.profile-text p:nth-of-type(3) {
+  margin-top: 20px;
 }/*# sourceMappingURL=App.css.map */
