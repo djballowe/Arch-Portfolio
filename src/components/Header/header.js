@@ -1,6 +1,5 @@
 import React from "react";
 import logo from "../../Images/logo vector.svg";
-import Dropdown from "./Dropdown";
 import Menu from "@mdi/react";
 import { mdiMenu } from "@mdi/js";
 import MobileMenu from "./MobileMenu";
