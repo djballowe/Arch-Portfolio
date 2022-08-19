@@ -152,13 +152,25 @@ body {
 .nav {
   list-style: none;
   display: none;
+  position: relative;
 }
 .nav li {
+  margin-left: 10px;
   padding: 10px 0;
   cursor: pointer;
 }
 .nav li:nth-of-type(1) {
   padding-top: 0px;
+}
+
+.line-hover {
+  transition: all 0.5s ease-in-out;
+  height: 19px;
+  width: 2px;
+  background-color: black;
+  position: absolute;
+  left: 1%;
+  top: 0%;
 }
 
 @media only screen and (min-width: 900px) {
@@ -266,5 +278,142 @@ body {
   .column {
     flex: 50%;
     max-width: 100%;
+  }
+}
+.profile-image img {
+  width: 100%;
+}
+
+.profile-text {
+  margin: auto;
+  width: 80%;
+}
+.profile-text p {
+  padding: 10px 0;
+}
+.profile-text p:nth-of-type(2) {
+  font-style: italic;
+  font-weight: 400;
+  padding: 0px;
+  color: rgb(119, 119, 119);
+}
+.profile-text p:nth-of-type(3) {
+  margin-top: 20px;
+}
+
+@media only screen and (min-width: 500px) and (max-width: 899px) {
+  .about-container {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    flex-direction: column;
+    margin: auto;
+    width: 70%;
+  }
+  .profile-image {
+    width: 100%;
+  }
+  .profile-text {
+    margin: 0px;
+    width: 100%;
+  }
+}
+@media only screen and (min-width: 900px) {
+  .about-container {
+    display: flex;
+    align-items: center;
+    width: calc(100vw - 203.85px);
+    align-items: center;
+    margin-top: 50px;
+  }
+  .profile-image {
+    width: 80%;
+    margin-right: 30px;
+    display: flex;
+    justify-content: center;
+  }
+  .profile-image img {
+    width: 80%;
+  }
+  .profile-text {
+    margin: 0px;
+    font-size: 1.5rem;
+  }
+}
+.contact-container {
+  margin: auto;
+  width: 90%;
+}
+
+.contact-text {
+  margin-bottom: 50px;
+  line-height: 150%;
+}
+.contact-text p:first-of-type {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.contact-input {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+.contact-input input {
+  border-radius: 2px;
+  border: rgb(140, 140, 140) 1px solid;
+  height: 30px;
+}
+.contact-input p:nth-of-type(1) {
+  margin-bottom: 10px;
+}
+
+.contact-submit {
+  display: flex;
+  justify-content: center;
+}
+.contact-submit button {
+  transition: all 0.3s ease-in-out;
+  width: 50%;
+  height: 50px;
+  background-color: white;
+  border: 2px solid black;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.contact-submit button:hover {
+  background-color: black;
+  color: white;
+}
+
+.input-name {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+}
+.input-name input {
+  width: 100%;
+}
+.input-name input:nth-of-type(1) {
+  margin-right: 10px;
+}
+
+.input-email,
+.input-subject,
+.input-message {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 800px) and (max-width: 1199px) {
+  .contact-container {
+    width: 60%;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .contact-container {
+    width: 40%;
   }
 }/*# sourceMappingURL=App.css.map */
