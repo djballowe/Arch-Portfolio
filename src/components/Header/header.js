@@ -11,17 +11,11 @@ const Header = () => {
       <MobileMenu />
       <div className="logo">
         <img src={logo} alt="" />
-        <Menu path={mdiMenu} size={1.5} />
+        <div className="mobile-menu-container">
+          <Menu path={mdiMenu} size={1.5} />
+        </div>
         <p>DAVID BALLOWE</p>
       </div>
-      <ul className="nav">
-        <li>Home</li>
-        <li>Portfolio</li>
-        <Dropdown />
-        <li>About</li>
-        <li>Contact</li>
-        <li>Blog</li>
-      </ul>
     </div>
   );
 };
