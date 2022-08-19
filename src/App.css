@@ -155,12 +155,13 @@ body {
 }
 .nav li {
   padding: 10px 0;
+  cursor: pointer;
 }
 .nav li:nth-of-type(1) {
   padding-top: 0px;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 900px) {
   .nav {
     display: block;
   }
@@ -169,7 +170,7 @@ body {
   }
   .main-container {
     display: grid;
-    grid-template-columns: 0.5fr 3fr;
+    grid-template-columns: 0.5fr fit-content(70%);
   }
   .logo {
     justify-content: start;
@@ -222,7 +223,7 @@ body {
   font-size: 1.3rem;
 }
 
-@media only screen and (min-width: 750px) {
+@media only screen and (min-width: 900px) {
   .slide-container {
     max-width: calc(100vw - 175px);
     display: flex;

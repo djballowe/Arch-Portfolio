@@ -6,8 +6,8 @@ export default function DsMenu() {
     <div className="nav-container">
       <ul className="nav">
         <li>Home</li>
-        <li>Portfolio</li>
-        <Dropdown />
+        <li>Interiors</li>
+        <li>Exteriors</li>
         <li>About</li>
         <li>Contact</li>
         <li>Blog</li>
