@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Interiors() {
+  const [images, setImages] = useState([]);
+
+  
+
   return (
     <div className="interiors-grid-container">
       <div className="column">

@@ -22,9 +22,9 @@ const imageInfoSchema = new Schema({
   date: String,
   project: String,
   type: String,
-});
+}, { collection : 'images' });
 
-const ImageInfo = mongoose.model("ImageInfo", imageInfoSchema);
+const ImageInfo = mongoose.model("images", imageInfoSchema);
 
 app.get("/api", (req, res) => {
   const data = {
@@ -41,12 +41,6 @@ app.get("/api", (req, res) => {
   res.json(data);
 });
 
-app.get("/api/name", (req, res) => {
-  const data = {
-    username: "Ballowe",
-    age: 26,
-  };
-  res.json(data);
-});
+
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
