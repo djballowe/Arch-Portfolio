@@ -1,5 +1,8 @@
 .interiors-grid-container {
   display: flex;
+  height: calc(100vh - 134px);
+  overflow: scroll;
+  padding-bottom: 50px;
   flex-wrap: wrap;
   justify-content: center;
   width: calc(100vw - 220.95px);
@@ -9,13 +12,20 @@
 }
 
 .column {
+  display: flex;
+  flex-direction: column;
   flex: 100%;
   max-width: 100%;
   padding: 0 4px;
   img {
+    transition: opacity 0.2s ease-in-out;
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
   }
 }
 
