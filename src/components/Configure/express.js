@@ -16,31 +16,27 @@ mongoose.connection.on("connected", () => {
 });
 
 const Schema = mongoose.Schema;
-const imageInfoSchema = new Schema({
-  file: String,
-  slide: Boolean,
-  date: String,
-  project: String,
-  type: String,
-}, { collection : 'images' });
+const imageInfoSchema = new Schema(
+  {
+    file: String,
+    slide: Boolean,
+    date: String,
+    project: String,
+    type: String,
+  },
+  { collection: "images" }
+);
 
 const ImageInfo = mongoose.model("images", imageInfoSchema);
 
 app.get("/api", (req, res) => {
-  const data = {
-    username: "David",
-    age: 26,
-  };
   ImageInfo.find({})
     .then((data) => {
-      console.log(data);
+      res.json(data);
     })
     .catch((error) => {
       console.log(error);
     });
-  res.json(data);
 });
-
-
 
 app.listen(PORT, console.log(`Server is starting at ${PORT}`));
