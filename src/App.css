@@ -149,6 +149,12 @@ body {
   font-size: 1.8rem;
 }
 
+.track {
+  position: absolute;
+  width: 20px;
+  height: 110px;
+}
+
 .nav {
   list-style: none;
   display: none;
@@ -169,7 +175,7 @@ body {
   width: 2px;
   background-color: black;
   position: absolute;
-  left: 1%;
+  left: 20%;
   top: 0%;
 }
 

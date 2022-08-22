@@ -21,6 +21,12 @@
   }
 }
 
+.track {
+  position: absolute;
+  width: 20px;
+  height: 110px;
+}
+
 .nav {
   list-style: none;
   display: none;
@@ -36,12 +42,12 @@
 }
 
 .line-hover {
-  transition: all .5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   height: 19px;
   width: 2px;
   background-color: black;
   position: absolute;
-  left: 1%;
+  left: 20%;
   top: 0%;
 }
 
