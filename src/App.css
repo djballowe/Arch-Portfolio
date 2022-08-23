@@ -228,12 +228,14 @@ body {
 }
 .slide-container img {
   width: 90%;
+  cursor: pointer;
 }
 
 .slide-controls {
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
 }
 .slide-controls p:nth-of-type(2) {
   color: rgb(175, 175, 175);
