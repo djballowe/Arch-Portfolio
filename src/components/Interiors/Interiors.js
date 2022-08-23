@@ -16,38 +16,18 @@ export default function Interiors() {
       });
   };
 
-  let interiors1 = images.filter(
-    (item) => item.type === "interiors" && item.col === "1"
+  let interiors = images.filter(
+    (item) => item.type === "interiors"
   );
 
-  let interiors2 = images.filter(
-    (item) => item.type === "interiors" && item.col === "2"
-  );
 
-  let interiors3 = images.filter(
-    (item) => item.type === "interiors" && item.col === "3"
-  );
-
-  const interiorImagesCol1 = interiors1.map((image) => {
+  const interiorImagesCol = interiors.map((image) => {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img src={require(`../../Images/Interiors/${image.file}`)} />
     );
   });
 
-  const interiorImagesCol2 = interiors2.map((image) => {
-    return (
-      // eslint-disable-next-line jsx-a11y/alt-text
-      <img src={require(`../../Images/Interiors/${image.file}`)} />
-    );
-  });
-
-  const interiorImagesCol3 = interiors3.map((image) => {
-    return (
-      // eslint-disable-next-line jsx-a11y/alt-text
-      <img src={require(`../../Images/Interiors/${image.file}`)} />
-    );
-  });
 
   useEffect(() => {
     getImages();
@@ -55,9 +35,10 @@ export default function Interiors() {
 
   return (
     <div className="interiors-grid-container">
-      <div className="column">{interiorImagesCol1}</div>
-      <div className="column">{interiorImagesCol2}</div>
-      <div className="column">{interiorImagesCol3}</div>
+      <div className="overlay"></div>
+      <div className="column">{interiorImagesCol}</div>
+      <div className="column">{interiorImagesCol}</div>
+      <div className="column">{interiorImagesCol}</div>
     </div>
   );
 }
