@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 const Contact = () => {
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [body, setBody] = useState("");
+
+  const handleSubmit = () => {
+   
+  };
+
   return (
     <div className="contact-container">
       <div className="contact-text">
@@ -13,24 +23,57 @@ const Contact = () => {
           get back within 48 hours. I look forward to hearing from you.
         </p>
       </div>
-      <form action="">
+      <form action="" onSubmit={handleSubmit}>
         <div className="contact-input">
           <p>Name*</p>
           <div className="input-name">
-            <input type="text" required />
-            <input type="text" required />
+            <input
+              type="text"
+              required
+              placeholder="First Name"
+              onChange={(e) => {
+                setFirstName(e.target.value);
+              }}
+            />
+            <input
+              type="text"
+              required
+              placeholder="Last Name"
+              onChange={(e) => {
+                setLastName(e.target.value);
+              }}
+            />
           </div>
           <div className="input-email">
             <p>Email*</p>
-            <input type="text" required />
+            <input
+              type="email"
+              required
+              onChange={(e) => {
+                setEmail(e.target.value);
+              }}
+            />
           </div>
           <div className="input-subject">
             <p>Subject*</p>
-            <input type="text" required />
+            <input
+              type="text"
+              required
+              onChange={(e) => {
+                setSubject(e.target.value);
+              }}
+            />
           </div>
           <div className="input-message">
             <p>Message*</p>
-            <textarea name="" id="" cols="30" rows="10" required></textarea>
+            <textarea
+              cols="30"
+              rows="10"
+              required
+              onChange={(e) => {
+                setBody(e.target.value);
+              }}
+            ></textarea>
           </div>
           <div className="contact-submit">
             <button>SUBMIT</button>

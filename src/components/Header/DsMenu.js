@@ -19,10 +19,10 @@ export default function DsMenu() {
   useEffect(() => {
     const menuKey = {
       "/": "0%",
-      "/interiors": "17%",
-      "/exteriors": "34.5%",
-      "/about": "52.5%",
-      "/contact": "69.5%",
+      "/interiors": "35%",
+      "/exteriors": "70%",
+      "/about": "107%",
+      "/contact": "142%",
     };
     const navigator = document.getElementById("line-hover");
     navigator.style.top = menuKey[location.pathname];
@@ -31,7 +31,9 @@ export default function DsMenu() {
   return (
     <div className="nav-container">
       <ul className="nav">
-        <div className="line-hover" id="line-hover"></div>
+        <div className="track">
+          <div className="line-hover" id="line-hover"></div>
+        </div>
         <li onClick={handleClick}>Home</li>
         <li onClick={handleClick}>Interiors</li>
         <li onClick={handleClick}>Exteriors</li>
