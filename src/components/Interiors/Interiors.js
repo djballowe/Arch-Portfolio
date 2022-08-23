@@ -1,18 +1,5 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
-import axios from "axios";
-
-// const getImages = () => {
-//   axios
-//     .get("http://localhost:8080/api/")
-//     .then((response) => {
-//       const data = response.data;
-//       return data;
-//     })
-//     .catch(() => {
-//       console.log("error");
-//     });
-// };
 
 const getImages = async () => {
   const res = await fetch("http://localhost:8080/api/");
@@ -21,8 +8,6 @@ const getImages = async () => {
 
 export default function Interiors() {
   const { data, status } = useQuery("images", getImages);
-
-  console.log(data);
   const [col1, setCol1] = useState([]);
   const [col2, setCol2] = useState([]);
   const [col3, setCol3] = useState([]);
@@ -31,7 +16,7 @@ export default function Interiors() {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        key={image.id}
+        key={image.myid}
         src={require(`../../Images/Interiors/${image.file}`)}
       />
     );
@@ -41,7 +26,7 @@ export default function Interiors() {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        key={image.id}
+        key={image.myid}
         src={require(`../../Images/Interiors/${image.file}`)}
       />
     );
@@ -51,15 +36,15 @@ export default function Interiors() {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        key={image.id}
+        key={image.myid}
         src={require(`../../Images/Interiors/${image.file}`)}
       />
     );
   });
 
   useEffect(() => {
-    function sortImages() {
-      if (data) {
+    const setImages = () => {
+      if (status === "success") {
         let interiors = data.filter((item) => item.type === "interiors");
         for (let i = 0; i < interiors.length; i++) {
           if (interiors[i].col === "1") {
@@ -71,10 +56,9 @@ export default function Interiors() {
           }
         }
       }
-    }
-
-    sortImages();
-  }, [data]);
+    };
+    setImages();
+  }, [data, status]);
 
   if (status === "loading") {
     return <p>This is a spinner just pretend</p>;

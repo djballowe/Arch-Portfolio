@@ -273,6 +273,14 @@ body {
   max-width: 100%;
   padding: 0 4px;
 }
+.column:nth-of-type(2) {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+.column:nth-of-type(3) {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
 .column img {
   transition: opacity 0.2s ease-in-out;
   margin-top: 8px;
