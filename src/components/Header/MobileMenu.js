@@ -30,7 +30,8 @@ export default function MobileMenu(props) {
       className="menu-container"
       onClick={menuClick}
       style={{
-        display: mobileMenuOpen ? "block" : "none",
+        visibility: mobileMenuOpen ? "visible" : "hidden",
+        opacity: mobileMenuOpen ? '1' : '0'
       }}
     >
       <ul className="mobile-menu">

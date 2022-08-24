@@ -2,9 +2,11 @@ import React, { useState, useEffect } from "react";
 import logo from "../../Images/logo vector.svg";
 import Menu from "@mdi/react";
 import { mdiMenu } from "@mdi/js";
-import MobileMenu from "./MobileMenu";
+import { useNavigate } from "react-router-dom";
 
 const Header = (props) => {
+  let navigate = useNavigate();
+
   const handleClick = () => {
     props.open();
   };
@@ -12,11 +14,23 @@ const Header = (props) => {
   return (
     <div className="header">
       <div className="logo">
-        <img src={logo} alt="" />
+        <img
+          src={logo}
+          alt=""
+          onClick={() => {
+            navigate("/");
+          }}
+        />
         <div className="mobile-menu-container">
           <Menu path={mdiMenu} size={1.5} onClick={handleClick} />
         </div>
-        <p>DAVID BALLOWE</p>
+        <p
+          onClick={() => {
+            navigate("/");
+          }}
+        >
+          DAVID BALLOWE
+        </p>
       </div>
     </div>
   );
