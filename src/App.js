@@ -7,11 +7,20 @@ import Interiors from "./components/Interiors/Interiors";
 import Exteriors from "./components/Exteriors/Exteriors";
 import About from "./components/About/About";
 import Contact from "./components/About/Contact";
+import MobileMenu from "./components/Header/MobileMenu";
+import React, { useState } from "react";
 
 function App() {
+  const [mobileMenuOpen, setMobileMenuOpen] = useState();
+
+  const mobileMenuClick = () => {
+    mobileMenuOpen ? setMobileMenuOpen(false) : setMobileMenuOpen(true);
+  };
+
   return (
     <div className="App">
-      <Header />
+      <MobileMenu open={mobileMenuOpen} handle={mobileMenuClick} />
+      <Header open={mobileMenuClick} />
       <div className="main-container">
         <DsMenu />
         <Routes>
