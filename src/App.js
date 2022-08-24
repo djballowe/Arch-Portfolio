@@ -9,12 +9,18 @@ import About from "./components/About/About";
 import Contact from "./components/About/Contact";
 import MobileMenu from "./components/Header/MobileMenu";
 import React, { useState } from "react";
+import InteriorSlide from "./components/Interiors/InteriorSlide";
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState();
+  const [image, setImage] = useState("");
 
   const mobileMenuClick = () => {
     mobileMenuOpen ? setMobileMenuOpen(false) : setMobileMenuOpen(true);
+  };
+
+  const imageClick = (e) => {
+    setImage(e);
   };
 
   return (
@@ -25,10 +31,11 @@ function App() {
         <DsMenu />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="interiors" element={<Interiors />} />
-          <Route path="exteriors" element={<Exteriors />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<Contact />} />
+          <Route path="/view" element={<InteriorSlide src={image} />} />
+          <Route path="/interiors" element={<Interiors click={imageClick} />} />
+          <Route path="/exteriors" element={<Exteriors />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </div>
     </div>

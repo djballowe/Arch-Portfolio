@@ -28,19 +28,23 @@ export default function DsMenu() {
     navigator.style.top = menuKey[location.pathname];
   });
 
-  return (
-    <div className="nav-container">
-      <ul className="nav">
-        <div className="track">
-          <div className="line-hover" id="line-hover"></div>
-        </div>
-        <li onClick={handleClick}>Home</li>
-        <li onClick={handleClick}>Interiors</li>
-        <li onClick={handleClick}>Exteriors</li>
-        <li onClick={handleClick}>About</li>
-        <li onClick={handleClick}>Contact</li>
-        <li>Blog</li>
-      </ul>
-    </div>
-  );
+  if (window.location.pathname === "/slide") {
+    return null;
+  } else {
+    return (
+      <div className="nav-container">
+        <ul className="nav">
+          <div className="track">
+            <div className="line-hover" id="line-hover"></div>
+          </div>
+          <li onClick={handleClick}>Home</li>
+          <li onClick={handleClick}>Interiors</li>
+          <li onClick={handleClick}>Exteriors</li>
+          <li onClick={handleClick}>About</li>
+          <li onClick={handleClick}>Contact</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+    );
+  }
 }
