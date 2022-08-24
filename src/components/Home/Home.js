@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/alt-text */
 import React, { useState, useEffect } from "react";
 const Images = require("./SlideImages.json").images;
 
@@ -6,9 +7,15 @@ export default function Home() {
 
   const handleClick = (e) => {
     const button = e.target.id;
-    button === "+"
-      ? setCurrentImage(currentImage + 1)
-      : setCurrentImage(currentImage - 1);
+    if (button === "+") {
+      currentImage === Images.length - 1
+        ? setCurrentImage(0)
+        : setCurrentImage(currentImage + 1);
+    } else {
+      currentImage === 0
+        ? setCurrentImage(Images.length - 1)
+        : setCurrentImage(currentImage - 1);
+    }
   };
 
   return (
