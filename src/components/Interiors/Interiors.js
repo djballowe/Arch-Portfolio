@@ -1,22 +1,31 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
+import { useNavigate } from "react-router-dom";
 
 const getImages = async () => {
   const res = await fetch("http://localhost:8080/api/");
   return res.json();
 };
 
-export default function Interiors() {
+export default function Interiors(props) {
+  let navigate = useNavigate();
   const { data, status } = useQuery("images", getImages);
   const [col1, setCol1] = useState([]);
   const [col2, setCol2] = useState([]);
   const [col3, setCol3] = useState([]);
 
+  const imageClick = (e) => {
+    navigate("/interiors-view");
+    props.click(e.target.id);
+  };
+
   const interiorImagesCol = col1.map((image) => {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
+        id={image.img_id}
         key={image.myid}
+        onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
       />
     );
@@ -26,7 +35,9 @@ export default function Interiors() {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
+        id={image.img_id}
         key={image.myid}
+        onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
       />
     );
@@ -36,7 +47,9 @@ export default function Interiors() {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
+        id={image.img_id}
         key={image.myid}
+        onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
       />
     );
@@ -64,11 +77,12 @@ export default function Interiors() {
     return <p>This is a spinner just pretend</p>;
   } else {
     return (
-      <div className="interiors-grid-container">
-        <div className="overlay"></div>
-        <div className="column">{interiorImagesCol}</div>
-        <div className="column">{interiorImagesCol2}</div>
-        <div className="column">{interiorImagesCol3}</div>
+      <div>
+        <div className="interiors-grid-container">
+          <div className="column">{interiorImagesCol}</div>
+          <div className="column">{interiorImagesCol2}</div>
+          <div className="column">{interiorImagesCol3}</div>
+        </div>
       </div>
     );
   }
