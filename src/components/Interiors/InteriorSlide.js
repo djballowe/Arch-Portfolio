@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
+import { useNavigate } from "react-router-dom";
 
 const getImages = async () => {
   const res = await fetch("http://localhost:8080/api/");
@@ -7,6 +8,7 @@ const getImages = async () => {
 };
 
 const InteriorSlide = (props) => {
+  let navigate = useNavigate();
   const { data, status } = useQuery("images", getImages);
   const [currentImage, setCurrentImage] = useState("");
   const [slide, setSlide] = useState([]);
@@ -24,13 +26,14 @@ const InteriorSlide = (props) => {
     }
   };
 
-  console.log(currentImage);
-
   useEffect(() => {
     if (status === "success" && !slide.length) {
       setCurrentImage(parseInt(props.src) - 1);
       let slideShow = data.filter((item) => item.type === "interiors");
       setSlide(slideShow);
+    }
+    if (!props.src) {
+      navigate("/interiors");
     }
   }, [currentImage, data, props.src, status]);
 

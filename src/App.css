@@ -138,6 +138,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
 }
 .logo img {
   max-width: 60px;

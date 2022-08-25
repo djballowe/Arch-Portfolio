@@ -24,7 +24,7 @@ export default function Interiors(props) {
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
         id={image.img_id}
-        key={image.myid}
+        key={image._id}
         onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
       />
@@ -36,7 +36,7 @@ export default function Interiors(props) {
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
         id={image.img_id}
-        key={image.myid}
+        key={image._id}
         onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
       />
@@ -48,7 +48,7 @@ export default function Interiors(props) {
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
         id={image.img_id}
-        key={image.myid}
+        key={image._id}
         onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
       />
@@ -74,7 +74,7 @@ export default function Interiors(props) {
   }, [data, status]);
 
   if (status === "loading") {
-    return <p>This is a spinner just pretend</p>;
+    return <div></div>;
   } else {
     return (
       <div>

@@ -42,7 +42,6 @@ export default function DsMenu() {
           <li onClick={handleClick}>Exteriors</li>
           <li onClick={handleClick}>About</li>
           <li onClick={handleClick}>Contact</li>
-          <li>Blog</li>
         </ul>
       </div>
     );
