@@ -23,7 +23,7 @@ export default function Interiors(props) {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.myid}
+        id={image.img_id}
         key={image.myid}
         onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
@@ -35,7 +35,7 @@ export default function Interiors(props) {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.myid}
+        id={image.img_id}
         key={image.myid}
         onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
@@ -47,7 +47,7 @@ export default function Interiors(props) {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.myid}
+        id={image.img_id}
         key={image.myid}
         onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
