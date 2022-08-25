@@ -33,8 +33,27 @@
   }
 }
 
+.exterior-column {
+  display: flex;
+  flex-direction: column;
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 4px;
+  img {
+    transition: opacity 0.2s ease-in-out;
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+    }
+  }
+}
+
 @media screen and (min-width: 900px) {
-  .column {
+  .column,
+  .exterior-column {
     flex: 25%;
     max-width: 50%;
   }
@@ -46,7 +65,8 @@
 }
 
 @media screen and (min-width: 600px) and (max-width: 899px) {
-  .column {
+  .column,
+  .exterior-column {
     flex: 35%;
     max-width: 50%;
   }

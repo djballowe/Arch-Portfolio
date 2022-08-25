@@ -15,7 +15,7 @@ export default function Interiors(props) {
   const [col3, setCol3] = useState([]);
 
   const imageClick = (e) => {
-    navigate("/view");
+    navigate("/interiors-view");
     props.click(e.target.id);
   };
 

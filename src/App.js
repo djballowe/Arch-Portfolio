@@ -10,6 +10,7 @@ import Contact from "./components/About/Contact";
 import MobileMenu from "./components/Header/MobileMenu";
 import React, { useState } from "react";
 import InteriorSlide from "./components/Interiors/InteriorSlide";
+import ExteriorSlide from "./components/Exteriors/ExteriorSlide";
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState();
@@ -31,9 +32,16 @@ function App() {
         <DsMenu />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/view" element={<InteriorSlide src={image} />} />
+          <Route
+            path="/interiors-view"
+            element={<InteriorSlide src={image} />}
+          />
+          <Route
+            path="/exteriors-view"
+            element={<ExteriorSlide src={image} />}
+          />
           <Route path="/interiors" element={<Interiors click={imageClick} />} />
-          <Route path="/exteriors" element={<Exteriors />} />
+          <Route path="/exteriors" element={<Exteriors click={imageClick} />} />
           <Route path="/about" element={<About />} />
           <Route path="/contact" element={<Contact />} />
         </Routes>

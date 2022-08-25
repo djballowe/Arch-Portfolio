@@ -292,8 +292,27 @@ body {
   opacity: 0.9;
 }
 
+.exterior-column {
+  display: flex;
+  flex-direction: column;
+  flex: 100%;
+  max-width: 100%;
+  padding: 0 4px;
+}
+.exterior-column img {
+  transition: opacity 0.2s ease-in-out;
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
+  cursor: pointer;
+}
+.exterior-column img:hover {
+  opacity: 0.9;
+}
+
 @media screen and (min-width: 900px) {
-  .column {
+  .column,
+.exterior-column {
     flex: 25%;
     max-width: 50%;
   }
@@ -304,7 +323,8 @@ body {
   }
 }
 @media screen and (min-width: 600px) and (max-width: 899px) {
-  .column {
+  .column,
+.exterior-column {
     flex: 35%;
     max-width: 50%;
   }
