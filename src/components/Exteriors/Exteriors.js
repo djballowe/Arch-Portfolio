@@ -24,7 +24,7 @@ const Exteriors = (props) => {
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
         id={image.img_id}
-        key={image.myid}
+        key={image._id}
         onClick={imageClick}
         src={require(`../../Images/Exteriors/${image.file}`)}
       />
@@ -36,7 +36,7 @@ const Exteriors = (props) => {
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
         id={image.img_id}
-        key={image.myid}
+        key={image._id}
         onClick={imageClick}
         src={require(`../../Images/Exteriors/${image.file}`)}
       />
@@ -48,7 +48,7 @@ const Exteriors = (props) => {
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
         id={image.img_id}
-        key={image.myid}
+        key={image._id}
         onClick={imageClick}
         src={require(`../../Images/Exteriors/${image.file}`)}
       />
@@ -72,6 +72,10 @@ const Exteriors = (props) => {
     }
     sortImages();
   }, [data]);
+
+  if (status === "loading") {
+    return <div></div>;
+  }
 
   return (
     <div className="interiors-grid-container">

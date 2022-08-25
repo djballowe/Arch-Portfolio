@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/alt-text */
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 const Images = require("./SlideImages.json").images;
 
 export default function Home() {

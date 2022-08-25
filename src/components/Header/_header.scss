@@ -10,6 +10,7 @@
 .logo {
   @include flex();
   justify-content: space-between;
+  cursor: pointer;
   img {
     max-width: 60px;
   }
