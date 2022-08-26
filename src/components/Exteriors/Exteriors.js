@@ -75,15 +75,15 @@ const Exteriors = (props) => {
 
   if (status === "loading") {
     return <div></div>;
+  } else {
+    return (
+      <div className="interiors-grid-container">
+        <div className="exterior-column">{exteriorImagesCol1}</div>
+        <div className="exterior-column">{exteriorImagesCol2}</div>
+        <div className="exterior-column">{exteriorImagesCol3}</div>
+      </div>
+    );
   }
-
-  return (
-    <div className="interiors-grid-container">
-      <div className="exterior-column">{exteriorImagesCol1}</div>
-      <div className="exterior-column">{exteriorImagesCol2}</div>
-      <div className="exterior-column">{exteriorImagesCol3}</div>
-    </div>
-  );
 };
 
 export default Exteriors;

@@ -1,14 +1,31 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useRef } from "react";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
+  const [sendStatus, setSendStatus] = useState("SUBMIT");
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [body, setBody] = useState("");
 
-  const handleSubmit = () => {
-   
+  const service_id = process.env.REACT_APP_SERVICE_ID;
+  const template_id = process.env.REACT_APP_TEMPLATE_ID;
+  const public_id = process.env.REACT_APP_PUBLIC_ID;
+
+  const form = useRef();
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(service_id, template_id, form.current, public_id).then(
+      (result) => {
+        console.log(result.text);
+      },
+      (error) => {
+        console.log(error.text);
+      }
+    );
   };
 
   return (
@@ -23,7 +40,7 @@ const Contact = () => {
           get back within 48 hours. I look forward to hearing from you.
         </p>
       </div>
-      <form action="" onSubmit={handleSubmit}>
+      <form action="" ref={form} onSubmit={handleSubmit}>
         <div className="contact-input">
           <p>Name*</p>
           <div className="input-name">
@@ -76,7 +93,7 @@ const Contact = () => {
             ></textarea>
           </div>
           <div className="contact-submit">
-            <button>SUBMIT</button>
+            <button>{sendStatus}</button>
           </div>
         </div>
       </form>
