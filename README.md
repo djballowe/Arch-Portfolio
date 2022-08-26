@@ -10,6 +10,6 @@ When I'm not writing code or working I am out shooting architecture for fun and 
 **Server:** Node, Express, email.js
 
 ## Main Features
-- All image fetched from Mongo db
+- All image info stored and fetched from Mongo db
 - Managed app state and inter- process communication with React hooks
 - Implemented email.js to get information from contact form and forward to buisness email
