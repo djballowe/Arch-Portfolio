@@ -1,5 +1,5 @@
 ## Arch Portfolio
-when I'm not writing code I am out shooting architecture for fun and assigned freelance projects. This site is where I house all of my best work as well as interface with clients.
+When I'm not writing code I am out shooting architecture for fun and assigned freelance projects. This site is where I house all of my best work as well as interface with clients.
 
 ## Live Site
 davidballowe.com
