@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
+import Spinner from "../Loading/Spinner";
 
 const getImages = async () => {
   const res = await fetch("/api/test");
@@ -74,7 +75,7 @@ export default function Interiors(props) {
   }, [data, status]);
 
   if (status === "loading") {
-    return <div></div>;
+    return <Spinner />;
   } else {
     return (
       <div>
