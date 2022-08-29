@@ -19,7 +19,7 @@ export default function Home() {
   };
 
   return (
-    <div>
+    <div className="slide-container-animation">
       <div className="slide-container" onClick={handleClick} id="+">
         <img
           onClick={handleClick}
