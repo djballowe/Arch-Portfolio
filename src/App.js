@@ -12,6 +12,7 @@ import React, { useState } from "react";
 import InteriorSlide from "./components/Interiors/InteriorSlide";
 import ExteriorSlide from "./components/Exteriors/ExteriorSlide";
 import Error from "./components/Error/Error";
+import Title from "./components/Loading/Title";
 
 function App() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState();
@@ -27,6 +28,7 @@ function App() {
 
   return (
     <div className="App">
+      <Title />
       <MobileMenu open={mobileMenuOpen} handle={mobileMenuClick} />
       <Header open={mobileMenuClick} />
       <div className="main-container">

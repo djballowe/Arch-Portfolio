@@ -138,6 +138,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  -webkit-animation: slideIn forwards 0.7s ease-in-out;
+          animation: slideIn forwards 0.7s ease-in-out;
   cursor: pointer;
 }
 .logo img {
@@ -199,6 +201,8 @@ body {
   }
   .nav-container {
     padding: 0 50px;
+    -webkit-animation: slideIn forwards 0.7s ease-in-out;
+            animation: slideIn forwards 0.7s ease-in-out;
   }
   .header {
     padding: 50px;
@@ -246,6 +250,8 @@ body {
   justify-content: center;
   cursor: pointer;
   margin-top: 30px;
+  -webkit-animation: slideIn forwards 1s ease-in-out;
+          animation: slideIn forwards 1s ease-in-out;
 }
 .slide-controls p:nth-of-type(2) {
   color: rgb(175, 175, 175);
@@ -255,7 +261,7 @@ body {
 
 @-webkit-keyframes fadeIn {
   from {
-    opacity: 0.5;
+    opacity: 0;
   }
   to {
     opacity: 1;
@@ -264,7 +270,7 @@ body {
 
 @keyframes fadeIn {
   from {
-    opacity: 0.5;
+    opacity: 0;
   }
   to {
     opacity: 1;
@@ -366,6 +372,13 @@ body {
 }
 .profile-text p:nth-of-type(3) {
   margin-top: 20px;
+}
+.profile-text span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.profile-text a {
+  color: black;
 }
 
 @media only screen and (min-width: 500px) and (max-width: 899px) {
@@ -552,4 +565,163 @@ body {
   color: rgb(175, 175, 175);
   padding: 0 10px;
   font-size: 1.3rem;
+}
+
+.load-container {
+  height: 800px;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lds-grid {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-grid div {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: black;
+  -webkit-animation: lds-grid 1.2s linear infinite;
+          animation: lds-grid 1.2s linear infinite;
+}
+.lds-grid div:nth-child(1) {
+  top: 8px;
+  left: 8px;
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+.lds-grid div:nth-child(2) {
+  top: 8px;
+  left: 32px;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(3) {
+  top: 8px;
+  left: 56px;
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(4) {
+  top: 32px;
+  left: 8px;
+  -webkit-animation-delay: -0.4s;
+          animation-delay: -0.4s;
+}
+.lds-grid div:nth-child(5) {
+  top: 32px;
+  left: 32px;
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(6) {
+  top: 32px;
+  left: 56px;
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(7) {
+  top: 56px;
+  left: 8px;
+  -webkit-animation-delay: -0.8s;
+          animation-delay: -0.8s;
+}
+.lds-grid div:nth-child(8) {
+  top: 56px;
+  left: 32px;
+  -webkit-animation-delay: -1.2s;
+          animation-delay: -1.2s;
+}
+.lds-grid div:nth-child(9) {
+  top: 56px;
+  left: 56px;
+  -webkit-animation-delay: -1.6s;
+          animation-delay: -1.6s;
+}
+@-webkit-keyframes lds-grid {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+@keyframes lds-grid {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  position: absolute;
+  background-color: white;
+  z-index: 100;
+}
+
+.title-text-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  -webkit-animation: fadeIn forwards 1s ease-in-out;
+          animation: fadeIn forwards 1s ease-in-out;
+  cursor: pointer;
+}
+.title-logo img {
+  max-width: 23.3%;
+}
+.title-logo p {
+  font-weight: 300;
+  font-size: 8vw;
+}
+.title-logo p:nth-of-type(1) {
+  margin-left: 20px;
+}
+.title-logo p:nth-of-type(2) {
+  margin-left: 5px;
+}
+
+.subtitle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  opacity: 0;
+  -webkit-animation: slideIn 1s ease-in-out;
+          animation: slideIn 1s ease-in-out;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  font-size: 3.5vw;
+}
+
+@media only screen and (min-width: 900px) {
+  .title-logo p:nth-of-type(1) {
+    margin-left: 50px;
+  }
+  .title-logo p:nth-of-type(2) {
+    margin-left: 20px;
+  }
 }/*# sourceMappingURL=App.css.map */

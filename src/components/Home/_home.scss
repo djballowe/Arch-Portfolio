@@ -15,6 +15,7 @@
   justify-content: center;
   cursor: pointer;
   margin-top: 30px;
+  animation: slideIn forwards 1s ease-in-out;
   p:nth-of-type(2) {
     color: rgb(175, 175, 175);
     padding: 0 10px;
@@ -24,7 +25,7 @@
 
 @keyframes fadeIn {
   from {
-    opacity: .5;
+    opacity: 0;
   }
   to {
     opacity: 1;

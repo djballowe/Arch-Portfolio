@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 
 export default function DsMenu() {
   let location = useLocation();
   let navigate = useNavigate();
+  
   const menuItems = {
     Home: "/",
     Interiors: "/interiors",

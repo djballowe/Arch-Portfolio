@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
+import Spinner from "../Loading/Spinner";
 
 const getImages = async () => {
   const res = await fetch("/api/test");
@@ -60,12 +61,17 @@ export default function Interiors(props) {
       if (status === "success") {
         let interiors = data.filter((item) => item.type === "interiors");
         for (let i = 0; i < interiors.length; i++) {
-          if (interiors[i].col === "1") {
-            setCol1((curr) => [...curr, interiors[i]]);
-          } else if (interiors[i].col === "2") {
-            setCol2((curr) => [...curr, interiors[i]]);
-          } else {
-            setCol3((curr) => [...curr, interiors[i]]);
+          switch (interiors[i].col) {
+            case "1":
+              setCol1((curr) => [...curr, interiors[i]]);
+              break;
+            case "2":
+              setCol2((curr) => [...curr, interiors[i]]);
+              break;
+            case "3":
+              setCol3((curr) => [...curr, interiors[i]]);
+              break;
+            default:
           }
         }
       }
@@ -74,7 +80,7 @@ export default function Interiors(props) {
   }, [data, status]);
 
   if (status === "loading") {
-    return <div></div>;
+    return <Spinner />;
   } else {
     return (
       <div>
