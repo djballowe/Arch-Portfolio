@@ -19,6 +19,13 @@
       margin-top: 20px;
     }
   }
+  span {
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  a {
+    color: black;
+  }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 899px) {

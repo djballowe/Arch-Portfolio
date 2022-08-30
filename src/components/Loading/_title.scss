@@ -28,10 +28,10 @@
     font-weight: 300;
     font-size: 8vw;
     &:nth-of-type(1) {
-      margin-left: 80px;
+      margin-left: 20px;
     }
     &:nth-of-type(2) {
-      margin-left: 30px;
+      margin-left: 5px;
     }
   }
 }
@@ -45,4 +45,17 @@
   animation-delay: 1s;
   animation-fill-mode: forwards;
   font-size: 3.5vw;
+}
+
+@media only screen and (min-width: 900px) {
+  .title-logo {
+    p {
+      &:nth-of-type(1) {
+        margin-left: 50px;
+      }
+      &:nth-of-type(2) {
+        margin-left: 20px;
+      }
+    }
+  }
 }

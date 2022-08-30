@@ -373,6 +373,13 @@ body {
 .profile-text p:nth-of-type(3) {
   margin-top: 20px;
 }
+.profile-text span {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.profile-text a {
+  color: black;
+}
 
 @media only screen and (min-width: 500px) and (max-width: 899px) {
   .about-container {
@@ -689,10 +696,10 @@ body {
   font-size: 8vw;
 }
 .title-logo p:nth-of-type(1) {
-  margin-left: 80px;
+  margin-left: 20px;
 }
 .title-logo p:nth-of-type(2) {
-  margin-left: 30px;
+  margin-left: 5px;
 }
 
 .subtitle {
@@ -708,4 +715,13 @@ body {
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
   font-size: 3.5vw;
+}
+
+@media only screen and (min-width: 900px) {
+  .title-logo p:nth-of-type(1) {
+    margin-left: 50px;
+  }
+  .title-logo p:nth-of-type(2) {
+    margin-left: 20px;
+  }
 }/*# sourceMappingURL=App.css.map */
