@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import logo from "../../Images/logo vector.svg";
 import Menu from "@mdi/react";
 import { mdiMenu } from "@mdi/js";
