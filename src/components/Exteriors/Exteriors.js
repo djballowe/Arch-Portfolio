@@ -58,21 +58,26 @@ const Exteriors = (props) => {
 
   useEffect(() => {
     function sortImages() {
-      if (data) {
+      if (status === "success") {
         let exteriors = data.filter((item) => item.type === "exteriors");
         for (let i = 0; i < exteriors.length; i++) {
-          if (exteriors[i].col === "1") {
-            setCol1((curr) => [...curr, exteriors[i]]);
-          } else if (exteriors[i].col === "2") {
-            setCol2((curr) => [...curr, exteriors[i]]);
-          } else {
-            setCol3((curr) => [...curr, exteriors[i]]);
+          switch (exteriors[i].col) {
+            case "1":
+              setCol1((curr) => [...curr, exteriors[i]]);
+              break;
+            case "2":
+              setCol2((curr) => [...curr, exteriors[i]]);
+              break;
+            case "3":
+              setCol3((curr) => [...curr, exteriors[i]]);
+              break;
+            default:
           }
         }
       }
     }
     sortImages();
-  }, [data]);
+  }, [data, status]);
 
   if (status === "loading") {
     return <Spinner />;

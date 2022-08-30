@@ -59,37 +59,19 @@ export default function Interiors(props) {
   useEffect(() => {
     const setImages = () => {
       if (status === "success") {
-        let exteriors = data.filter((item) => item.type === "exteriors");
         let interiors = data.filter((item) => item.type === "interiors");
-        if (window.location.pathname === "/interiors") {
-          for (let i = 0; i < interiors.length; i++) {
-            switch (interiors[i].col) {
-              case "1":
-                setCol1((curr) => [...curr, interiors[i]]);
-                break;
-              case "2":
-                setCol2((curr) => [...curr, interiors[i]]);
-                break;
-              case "3":
-                setCol3((curr) => [...curr, interiors[i]]);
-                break;
-              default:
-            }
-          }
-        } else if (window.location.pathname === "/exteriors") {
-          for (let i = 0; i < exteriors.length; i++) {
-            switch (exteriors[i].col) {
-              case "1":
-                setCol1((curr) => [...curr, exteriors[i]]);
-                break;
-              case "2":
-                setCol2((curr) => [...curr, exteriors[i]]);
-                break;
-              case "3":
-                setCol3((curr) => [...curr, exteriors[i]]);
-                break;
-              default:
-            }
+        for (let i = 0; i < interiors.length; i++) {
+          switch (interiors[i].col) {
+            case "1":
+              setCol1((curr) => [...curr, interiors[i]]);
+              break;
+            case "2":
+              setCol2((curr) => [...curr, interiors[i]]);
+              break;
+            case "3":
+              setCol3((curr) => [...curr, interiors[i]]);
+              break;
+            default:
           }
         }
       }
