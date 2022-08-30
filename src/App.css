@@ -682,17 +682,17 @@ body {
   cursor: pointer;
 }
 .title-logo img {
-  max-width: 85px;
+  max-width: 23.3%;
 }
 .title-logo p {
   font-weight: 300;
-  font-size: 3rem;
+  font-size: 8vw;
 }
 .title-logo p:nth-of-type(1) {
-  margin-left: 20px;
+  margin-left: 80px;
 }
 .title-logo p:nth-of-type(2) {
-  margin-left: 5px;
+  margin-left: 30px;
 }
 
 .subtitle {
@@ -707,8 +707,5 @@ body {
           animation-delay: 1s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes popUp {}
-
-@keyframes popUp {}/*# sourceMappingURL=App.css.map */
+  font-size: 3.5vw;
+}/*# sourceMappingURL=App.css.map */

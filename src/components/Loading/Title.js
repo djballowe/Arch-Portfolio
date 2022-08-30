@@ -13,8 +13,8 @@ const Title = () => {
     setDisplay(false);
   };
 
-  setTimeout(timer, 3000);
-  setTimeout(displayTimer, 4000);
+  setTimeout(timer, 3500);
+  setTimeout(displayTimer, 4500);
 
   return (
     <div
