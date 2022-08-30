@@ -138,6 +138,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  -webkit-animation: slideIn forwards 0.7s ease-in-out;
+          animation: slideIn forwards 0.7s ease-in-out;
   cursor: pointer;
 }
 .logo img {
@@ -199,6 +201,8 @@ body {
   }
   .nav-container {
     padding: 0 50px;
+    -webkit-animation: slideIn forwards 0.7s ease-in-out;
+            animation: slideIn forwards 0.7s ease-in-out;
   }
   .header {
     padding: 50px;
@@ -246,6 +250,8 @@ body {
   justify-content: center;
   cursor: pointer;
   margin-top: 30px;
+  -webkit-animation: slideIn forwards 1s ease-in-out;
+          animation: slideIn forwards 1s ease-in-out;
 }
 .slide-controls p:nth-of-type(2) {
   color: rgb(175, 175, 175);

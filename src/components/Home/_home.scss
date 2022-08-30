@@ -15,6 +15,7 @@
   justify-content: center;
   cursor: pointer;
   margin-top: 30px;
+  animation: slideIn forwards 1s ease-in-out;
   p:nth-of-type(2) {
     color: rgb(175, 175, 175);
     padding: 0 10px;

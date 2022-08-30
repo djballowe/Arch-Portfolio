@@ -10,6 +10,7 @@
 .logo {
   @include flex();
   justify-content: space-between;
+  animation: slideIn forwards 0.7s ease-in-out;
   cursor: pointer;
   img {
     max-width: 60px;
@@ -71,6 +72,7 @@
   }
   .nav-container {
     padding: 0 50px;
+    animation: slideIn forwards 0.7s ease-in-out;
   }
   .header {
     padding: 50px;
