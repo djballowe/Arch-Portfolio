@@ -7,9 +7,10 @@ When I'm not writing code I am out shooting architecture for fun and assigned fr
 ## Tech Stack
 **Client:** React, SCSS
 
-**Server:** Node, Express, email.js, Mongo db
+**Server:** Node, Express, email.js, Mongo db, Vercel
 
 ## Main Features
 - All image info stored and fetched from Mongo db
 - Managed app state and inter- process communication with React hooks
 - Implemented email.js to get information from contact form and forward to buisness email
+- Serverless function implemented with Vercel to connected to Mongo db collection 
