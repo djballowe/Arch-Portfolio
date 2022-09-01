@@ -4,7 +4,6 @@ const uri = process.env.REACT_APP_MONGODB_URI;
 const options = {};
 
 if (!process.env.REACT_APP_MONGODB_URI) {
-  console.log(process.env.REACT_APP_MONGODB_URI);
   throw new Error("Please add your Mongo URI");
 }
 

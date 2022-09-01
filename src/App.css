@@ -138,8 +138,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  -webkit-animation: slideIn forwards 0.7s ease-in-out;
-          animation: slideIn forwards 0.7s ease-in-out;
+  -webkit-animation: slideIn 1s ease-in-out;
+          animation: slideIn 1s ease-in-out;
+  opacity: 0;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
   cursor: pointer;
 }
 .logo img {
@@ -201,8 +206,13 @@ body {
   }
   .nav-container {
     padding: 0 50px;
-    -webkit-animation: slideIn forwards 0.7s ease-in-out;
-            animation: slideIn forwards 0.7s ease-in-out;
+    -webkit-animation: slideIn 1s ease-in-out;
+            animation: slideIn 1s ease-in-out;
+    opacity: 0;
+    -webkit-animation-delay: 3.5s;
+            animation-delay: 3.5s;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
   }
   .header {
     padding: 50px;
