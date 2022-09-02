@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 import Spinner from "../Loading/Spinner";
 
 const getImages = async () => {
-  const res = await fetch("/api/test");
+  const res = await fetch("/api/list");
   return res.json();
 };
 
