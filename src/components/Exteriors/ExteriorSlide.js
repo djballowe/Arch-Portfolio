@@ -1,15 +1,9 @@
 import React, { useState, useEffect } from "react";
-import { useQuery } from "react-query";
+import { images } from "../../Images/Data";
 import { useNavigate } from "react-router-dom";
-
-const getImages = async () => {
-  const res = await fetch("http://localhost:8080/api/list");
-  return res.json();
-};
 
 const ExteriorSlide = (props) => {
   let navigate = useNavigate();
-  const { data, status } = useQuery("images", getImages);
   const [currentImage, setCurrentImage] = useState("");
   const [slide, setSlide] = useState([]);
 
@@ -27,15 +21,14 @@ const ExteriorSlide = (props) => {
   };
 
   useEffect(() => {
-    if (status === "success" && !slide.length) {
-      setCurrentImage(parseInt(props.src) - 1);
-      let slideShow = data.filter((item) => item.type === "exteriors");
-      setSlide(slideShow);
-    }
+    setCurrentImage(parseInt(props.src) - 1);
+    let slideShow = images.filter((item) => item.type === "exteriors");
+    setSlide(slideShow);
+
     if (!props.src) {
       navigate("/exteriors");
     }
-  }, [currentImage, data, props.src, status]);
+  }, []);
 
   if (
     currentImage === "" ||

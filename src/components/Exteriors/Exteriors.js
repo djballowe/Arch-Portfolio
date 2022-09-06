@@ -13,36 +13,36 @@ const Exteriors = (props) => {
     props.click(e.target.id);
   };
 
-  const exteriorImagesCol1 = col1.map((image) => {
+  const exteriorImagesCol1 = col1.map((image, index) => {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
         id={image.img_id}
-        key={image._id}
+        key={index}
         onClick={imageClick}
         src={require(`../../Images/Exteriors/${image.file}`)}
       />
     );
   });
 
-  const exteriorImagesCol2 = col2.map((image) => {
+  const exteriorImagesCol2 = col2.map((image, index) => {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
         id={image.img_id}
-        key={image._id}
+        key={index}
         onClick={imageClick}
         src={require(`../../Images/Exteriors/${image.file}`)}
       />
     );
   });
 
-  const exteriorImagesCol3 = col3.map((image) => {
+  const exteriorImagesCol3 = col3.map((image, index) => {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
         id={image.img_id}
-        key={image._id}
+        key={index}
         onClick={imageClick}
         src={require(`../../Images/Exteriors/${image.file}`)}
       />

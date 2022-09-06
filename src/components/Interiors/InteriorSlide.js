@@ -21,11 +21,10 @@ const InteriorSlide = (props) => {
   };
 
   useEffect(() => {
-    
-      setCurrentImage(parseInt(props.src) - 1);
-      let slideShow = images.filter((item) => item.type === "interiors");
-      setSlide(slideShow);
-    
+    setCurrentImage(parseInt(props.src) - 1);
+    let slideShow = images.filter((item) => item.type === "interiors");
+    setSlide(slideShow);
+
     if (!props.src) {
       navigate("/interiors");
     }
