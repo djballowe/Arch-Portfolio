@@ -17,7 +17,7 @@ export default function Interiors(props) {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.img_id}
+        id={image.index}
         key={index}
         onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
@@ -29,7 +29,7 @@ export default function Interiors(props) {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.img_id}
+        id={image.index}
         key={index}
         onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
@@ -41,7 +41,7 @@ export default function Interiors(props) {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.img_id}
+        id={image.index}
         key={index}
         onClick={imageClick}
         src={require(`../../Images/Interiors/${image.file}`)}
@@ -55,12 +55,15 @@ export default function Interiors(props) {
       for (let i = 0; i < interiors.length; i++) {
         switch (interiors[i].col) {
           case "1":
+            interiors[i].index = i;
             setCol1((curr) => [...curr, interiors[i]]);
             break;
           case "2":
+            interiors[i].index = i;
             setCol2((curr) => [...curr, interiors[i]]);
             break;
           case "3":
+            interiors[i].index = i;
             setCol3((curr) => [...curr, interiors[i]]);
             break;
           default:

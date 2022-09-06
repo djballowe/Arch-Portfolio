@@ -10,18 +10,19 @@ const InteriorSlide = (props) => {
   const handleClick = (e) => {
     const button = e.target.id;
     if (button === "+") {
-      currentImage === slide.length - 1
+      currentImage === slide.length
         ? setCurrentImage(0)
         : setCurrentImage(currentImage + 1);
     } else {
       currentImage === 0
-        ? setCurrentImage(slide.length - 1)
-        : setCurrentImage(currentImage - 1);
+        ? setCurrentImage(slide.length)
+        : setCurrentImage(currentImage);
     }
   };
+  console.log(currentImage);
 
   useEffect(() => {
-    setCurrentImage(parseInt(props.src) - 1);
+    setCurrentImage(parseInt(props.src));
     let slideShow = images.filter((item) => item.type === "interiors");
     setSlide(slideShow);
 
