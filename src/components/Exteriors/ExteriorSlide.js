@@ -3,7 +3,7 @@ import { useQuery } from "react-query";
 import { useNavigate } from "react-router-dom";
 
 const getImages = async () => {
-  const res = await fetch("http://localhost:8080/api/");
+  const res = await fetch("http://localhost:8080/api/list");
   return res.json();
 };
 
