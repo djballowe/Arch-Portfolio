@@ -16,10 +16,9 @@ const InteriorSlide = (props) => {
     } else {
       currentImage === 0
         ? setCurrentImage(slide.length)
-        : setCurrentImage(currentImage);
+        : setCurrentImage(currentImage - 1);
     }
   };
-  console.log(currentImage);
 
   useEffect(() => {
     setCurrentImage(parseInt(props.src));
@@ -42,7 +41,7 @@ const InteriorSlide = (props) => {
       <div className="overlay">
         <div className="interior-slide-img">
           <img
-            src={require(`../../Images/Interiors/${slide[currentImage].file}`)}
+            src={require(`../../Images/interiors/${slide[currentImage].file}`)}
             alt=""
           />
         </div>

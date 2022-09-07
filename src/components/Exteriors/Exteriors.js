@@ -17,10 +17,10 @@ const Exteriors = (props) => {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.img_id}
+        id={image.index}
         key={index}
         onClick={imageClick}
-        src={require(`../../Images/Exteriors/${image.file}`)}
+        src={require(`../../Images/exteriors/${image.file}`)}
       />
     );
   });
@@ -29,10 +29,10 @@ const Exteriors = (props) => {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.img_id}
+        id={image.index}
         key={index}
         onClick={imageClick}
-        src={require(`../../Images/Exteriors/${image.file}`)}
+        src={require(`../../Images/exteriors/${image.file}`)}
       />
     );
   });
@@ -41,10 +41,10 @@ const Exteriors = (props) => {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.img_id}
+        id={image.index}
         key={index}
         onClick={imageClick}
-        src={require(`../../Images/Exteriors/${image.file}`)}
+        src={require(`../../Images/exteriors/${image.file}`)}
       />
     );
   });
@@ -53,6 +53,7 @@ const Exteriors = (props) => {
     function sortImages() {
       let exteriors = images.filter((item) => item.type === "exteriors");
       for (let i = 0; i < exteriors.length; i++) {
+        exteriors[i].index = i;
         switch (exteriors[i].col) {
           case "1":
             setCol1((curr) => [...curr, exteriors[i]]);

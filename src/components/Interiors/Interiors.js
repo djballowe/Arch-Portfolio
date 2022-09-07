@@ -20,7 +20,7 @@ export default function Interiors(props) {
         id={image.index}
         key={index}
         onClick={imageClick}
-        src={require(`../../Images/Interiors/${image.file}`)}
+        src={require(`../../Images/interiors/${image.file}`)}
       />
     );
   });
@@ -32,7 +32,7 @@ export default function Interiors(props) {
         id={image.index}
         key={index}
         onClick={imageClick}
-        src={require(`../../Images/Interiors/${image.file}`)}
+        src={require(`../../Images/interiors/${image.file}`)}
       />
     );
   });
@@ -44,7 +44,7 @@ export default function Interiors(props) {
         id={image.index}
         key={index}
         onClick={imageClick}
-        src={require(`../../Images/Interiors/${image.file}`)}
+        src={require(`../../Images/interiors/${image.file}`)}
       />
     );
   });
@@ -53,17 +53,15 @@ export default function Interiors(props) {
     const setImages = () => {
       let interiors = images.filter((item) => item.type === "interiors");
       for (let i = 0; i < interiors.length; i++) {
+        interiors[i].index = i;
         switch (interiors[i].col) {
           case "1":
-            interiors[i].index = i;
             setCol1((curr) => [...curr, interiors[i]]);
             break;
           case "2":
-            interiors[i].index = i;
             setCol2((curr) => [...curr, interiors[i]]);
             break;
           case "3":
-            interiors[i].index = i;
             setCol3((curr) => [...curr, interiors[i]]);
             break;
           default:
