@@ -10,12 +10,12 @@ const InteriorSlide = (props) => {
   const handleClick = (e) => {
     const button = e.target.id;
     if (button === "+") {
-      currentImage === slide.length
+      currentImage === slide.length - 1
         ? setCurrentImage(0)
         : setCurrentImage(currentImage + 1);
     } else {
       currentImage === 0
-        ? setCurrentImage(slide.length)
+        ? setCurrentImage(slide.length - 1)
         : setCurrentImage(currentImage - 1);
     }
   };
