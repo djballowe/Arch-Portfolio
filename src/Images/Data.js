@@ -6,7 +6,6 @@ export const images = [
     type: "interiors",
     col: "3",
     project: "Truckee Minimal",
-    img_id: 2,
   },
 
   {
@@ -16,14 +15,12 @@ export const images = [
     client: "RCP Construction",
     type: "interiors",
     col: "1",
-    img_id: 3,
   },
   {
     file: "Book-5.JPG",
     slide: "false",
     type: "interiors",
     col: "1",
-    img_id: 4,
   },
   {
     file: "Book-6.JPG",
@@ -31,7 +28,6 @@ export const images = [
     project: "North Star",
     type: "interiors",
     col: "1",
-    img_id: 5,
   },
   {
     file: "Book-7.JPG",
@@ -39,7 +35,6 @@ export const images = [
     project: "North Star",
     type: "interiors",
     col: "1",
-    img_id: 6,
   },
   {
     file: "Book-8.JPG",
@@ -47,7 +42,6 @@ export const images = [
     project: "North Star",
     type: "interiors",
     col: "1",
-    img_id: 7,
   },
   {
     file: "Book-9.JPG",
@@ -62,7 +56,6 @@ export const images = [
     date: "5/14/2021",
     type: "interiors",
     col: "1",
-    img_id: 9,
   },
   {
     file: "Book-19.JPG",
@@ -70,28 +63,24 @@ export const images = [
     date: "5/14/2021",
     type: "interiors",
     col: "1",
-    img_id: 10,
   },
   {
     file: "Book-21.JPG",
     slide: "true",
     type: "interiors",
     col: "1",
-    img_id: 11,
   },
   {
     file: "Book-22.JPG",
     slide: "true",
     type: "interiors",
     col: "1",
-    img_id: 12,
   },
   {
     file: "Book-24.JPG",
     slide: "true",
     type: "interiors",
     col: "2",
-    img_id: 13,
   },
   {
     file: "Book-34.JPG",
@@ -101,7 +90,6 @@ export const images = [
     project: "Modern Farmhouse",
     type: "interiors",
     col: "2",
-    img_id: 14,
   },
   {
     file: "website unused-101.JPG",
@@ -111,7 +99,6 @@ export const images = [
     type: "interiors",
     col: "2",
     client: "ODS Architecture",
-    img_id: 15,
   },
   {
     file: "interiors2.JPG",
@@ -121,7 +108,6 @@ export const images = [
     project: "Modern Farmhouse",
     type: "interiors",
     col: "3",
-    img_id: 16,
   },
   {
     file: "interiors3.JPG",
@@ -129,7 +115,6 @@ export const images = [
     project: "Tahoe Condo",
     type: "interiors",
     col: "2",
-    img_id: 17,
   },
   {
     file: "interiors4.JPG",
@@ -139,7 +124,6 @@ export const images = [
     project: "Modern Farmhouse",
     type: "interiors",
     col: "2",
-    img_id: 18,
   },
   {
     file: "interiors5.JPG",
@@ -147,21 +131,18 @@ export const images = [
     date: "5/14/2021",
     type: "interiors",
     col: "2",
-    img_id: 19,
   },
   {
     file: "interiors6.JPG",
     slide: "false",
     type: "interiors",
     col: "2",
-    img_id: 20,
   },
   {
     file: "interiors8.JPG",
     slide: "false",
     type: "interiors",
     col: "2",
-    img_id: 21,
   },
   {
     file: "interiors7.JPG",
@@ -170,7 +151,6 @@ export const images = [
     project: "Truckee Minimal",
     type: "interiors",
     col: "22",
-    img_id: 22,
   },
   {
     file: "Book-2.JPG",
@@ -179,7 +159,6 @@ export const images = [
     type: "interiors",
     col: "3",
     client: "RCP Construction",
-    img_id: 23,
   },
   {
     file: "Mount Vernon-6.JPG",
@@ -188,14 +167,12 @@ export const images = [
     project: "Truckee Minimal",
     type: "interiors",
     col: "2",
-    img_id: 24,
   },
   {
     file: "website unused-6.JPG",
     slide: "false",
     type: "interiors",
     col: "3",
-    img_id: 25,
   },
   {
     file: "website unused-7.JPG",
@@ -203,7 +180,6 @@ export const images = [
     date: "5/14/2021",
     type: "interiors",
     col: "3",
-    img_id: 26,
   },
   {
     file: "website unused-9.JPG",
@@ -211,28 +187,24 @@ export const images = [
     date: "5/14/2021",
     type: "interiors",
     col: "3",
-    img_id: 27,
   },
   {
     file: "website unused-10.JPG",
     slide: "false",
     type: "interiors",
     col: "3",
-    img_id: 28,
   },
   {
     file: "website unused-11.JPG",
     slide: "false",
     type: "interiors",
     col: "3",
-    img_id: 29,
   },
   {
     file: "website unused-12.JPG",
     slide: "false",
     type: "interiors",
     col: "3",
-    img_id: 30,
   },
   {
     file: "website unused-100.JPG",
@@ -242,7 +214,6 @@ export const images = [
     project: "Modern Farmhouse",
     type: "interiors",
     col: "3",
-    img_id: 31,
   },
   {
     file: "interiors1.JPG",
@@ -251,7 +222,14 @@ export const images = [
     project: "Truckee Modern",
     type: "interiors",
     col: "2",
-    img_id: 32,
+  },
+  {
+    file: "Book-1.JPG",
+    slide: "false",
+    date: "3/13/2021",
+    client: "RCP Construction",
+    type: "interiors",
+    col: "3",
   },
   {
     file: "Book-10.JPG",
@@ -259,7 +237,6 @@ export const images = [
     project: "North Star",
     type: "exteriors",
     col: "3",
-    img_id: 1,
   },
   {
     file: "Book-11.JPG",
@@ -267,21 +244,18 @@ export const images = [
     project: "North Star",
     type: "exteriors",
     col: "1",
-    img_id: 2,
   },
   {
     file: "Book-12.JPG",
     slide: "true",
     type: "exteriors",
     col: "2",
-    img_id: 3,
   },
   {
     file: "Book-13.JPG",
     slide: "true",
     type: "exteriors",
     col: "1",
-    img_id: 4,
   },
   {
     file: "Book-14.JPG",
@@ -289,7 +263,6 @@ export const images = [
     type: "exteriors",
     project: "Chico State",
     col: "1",
-    img_id: 5,
   },
   {
     file: "Book-15.JPG",
@@ -297,7 +270,6 @@ export const images = [
     type: "exteriors",
     project: "Chico State",
     col: "1",
-    img_id: 6,
   },
   {
     file: "Book-26.JPG",
@@ -305,7 +277,6 @@ export const images = [
     type: "exteriors",
     project: "Napa Valley Performing Arts Center",
     col: "2",
-    img_id: 7,
   },
   {
     file: "Book-27.JPG",
@@ -313,21 +284,18 @@ export const images = [
     type: "exteriors",
     project: "Napa Valley Performing Arts Center",
     col: "2",
-    img_id: 8,
   },
   {
     file: "Book-29.JPG",
     slide: "false",
     type: "exteriors",
     col: "2",
-    img_id: 9,
   },
   {
     file: "Book-30.JPG",
     slide: "false",
     type: "exteriors",
     col: "3",
-    img_id: 10,
   },
   {
     file: "Book-31.JPG",
@@ -337,7 +305,6 @@ export const images = [
     project: "Modern Farmhouse",
     type: "exteriors",
     col: "2",
-    img_id: 11,
   },
   {
     file: "Book-36.JPG",
@@ -347,7 +314,6 @@ export const images = [
     project: "Modern Farmhouse",
     type: "exteriors",
     col: "2",
-    img_id: 12,
   },
   {
     file: "Book-37.JPG",
@@ -357,7 +323,6 @@ export const images = [
     project: "Modern Farmhouse",
     type: "exteriors",
     col: "1",
-    img_id: 13,
   },
   {
     file: "Mount Vernon-1.JPG",
@@ -366,7 +331,6 @@ export const images = [
     project: "Hill Top Oaks Winery",
     type: "exteriors",
     col: "1",
-    img_id: 14,
   },
   {
     file: "Mount Vernon-2.JPG",
@@ -375,42 +339,36 @@ export const images = [
     project: "Hill Top Oaks Winery",
     type: "exteriors",
     col: "1",
-    img_id: 15,
   },
   {
     file: "the rest-2.JPG",
     slide: "false",
     type: "exteriors",
     col: "1",
-    img_id: 16,
   },
   {
     file: "the rest-3.JPG",
     slide: "false",
     type: "exteriors",
     col: "1",
-    img_id: 17,
   },
   {
     file: "the rest-4.JPG",
     slide: "false",
     type: "exteriors",
     col: "1",
-    img_id: 18,
   },
   {
     file: "the rest-5.JPG",
     slide: "true",
     type: "exteriors",
     col: "2",
-    img_id: 19,
   },
   {
     file: "the rest-6.JPG",
     slide: "false",
     type: "exteriors",
     col: "2",
-    img_id: 20,
   },
   {
     file: "the rest-7.JPG",
@@ -418,7 +376,6 @@ export const images = [
     type: "exteriors",
     project: "Chico State",
     col: "2",
-    img_id: 21,
   },
   {
     file: "the rest-8.JPG",
@@ -426,7 +383,6 @@ export const images = [
     type: "exteriors",
     project: "Chico State",
     col: "3",
-    img_id: 22,
   },
   {
     file: "the rest-9.JPG",
@@ -434,7 +390,6 @@ export const images = [
     type: "exteriors",
     project: "Chico State",
     col: "3",
-    img_id: 23,
   },
   {
     file: "the rest-10.JPG",
@@ -443,7 +398,6 @@ export const images = [
     project: "Truckee Modern",
     date: "5/13/2021",
     col: "2",
-    img_id: 24,
   },
   {
     file: "the rest-11.JPG",
@@ -452,35 +406,30 @@ export const images = [
     project: "Truckee Modern",
     date: "5/13/2021",
     col: "3",
-    img_id: 25,
   },
   {
     file: "the rest-12.JPG",
     slide: "false",
     type: "exteriors",
     col: "2",
-    img_id: 26,
   },
   {
     file: "the rest-13.JPG",
     slide: "true",
     type: "exteriors",
     col: "3",
-    img_id: 27,
   },
   {
     file: "the rest-14.JPG",
     slide: "false",
     type: "exteriors",
     col: "3",
-    img_id: 28,
   },
   {
     file: "the rest-15.JPG",
     slide: "true",
     type: "exteriors",
     col: "3",
-    img_id: 29,
   },
   {
     file: "the rest-16.JPG",
@@ -490,7 +439,6 @@ export const images = [
     project: "Modern Farmhouse",
     type: "exteriors",
     col: "3",
-    img_id: 30,
   },
   {
     file: "the rest-17.JPG",
@@ -500,15 +448,5 @@ export const images = [
     project: "Modern Farmhouse",
     type: "exteriors",
     col: "3",
-    img_id: 31,
-  },
-  {
-    file: "Book-1.JPG",
-    slide: "false",
-    date: "3/13/2021",
-    client: "RCP Construction",
-    type: "interiors",
-    col: "3",
-    img_id: 1,
   },
 ];

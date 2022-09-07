@@ -17,10 +17,10 @@ export default function Interiors(props) {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.img_id}
+        id={image.index}
         key={index}
         onClick={imageClick}
-        src={require(`../../Images/Interiors/${image.file}`)}
+        src={require(`../../Images/interiors/${image.file}`)}
       />
     );
   });
@@ -29,10 +29,10 @@ export default function Interiors(props) {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.img_id}
+        id={image.index}
         key={index}
         onClick={imageClick}
-        src={require(`../../Images/Interiors/${image.file}`)}
+        src={require(`../../Images/interiors/${image.file}`)}
       />
     );
   });
@@ -41,10 +41,10 @@ export default function Interiors(props) {
     return (
       // eslint-disable-next-line jsx-a11y/alt-text
       <img
-        id={image.img_id}
+        id={image.index}
         key={index}
         onClick={imageClick}
-        src={require(`../../Images/Interiors/${image.file}`)}
+        src={require(`../../Images/interiors/${image.file}`)}
       />
     );
   });
@@ -53,6 +53,7 @@ export default function Interiors(props) {
     const setImages = () => {
       let interiors = images.filter((item) => item.type === "interiors");
       for (let i = 0; i < interiors.length; i++) {
+        interiors[i].index = i;
         switch (interiors[i].col) {
           case "1":
             setCol1((curr) => [...curr, interiors[i]]);
